@@ -63,7 +63,7 @@ nav ul {
 
 /* Hero Section */
 .hero {
-    background: url('/images/blackcar.jpg') no-repeat center center;
+    background: url('/Images/blackcar.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background covers the section */
     color: white;
     text-align: center;
