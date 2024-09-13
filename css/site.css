@@ -62,9 +62,32 @@ nav ul {
             }
 
 
+/* Added in extra +/
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Allow horizontal scroll if necessary */
+        padding: 0 10px; /* Adjust padding if needed */
+    }
+
+    nav ul {
+        flex-wrap: nowrap; /* Prevent wrapping of nav items */
+    }
+
+        nav ul li {
+            margin-left: 10px; /* Adjust margin for smaller screens */
+        }
+
+    header .logo img {
+        height: 40px; /* Adjust logo size if necessary */
+    }
+}
+
+
 /* Hero Section */
 .hero {
-    background: url('/Images/blackcar.jpg') no-repeat center center;
+    background: url('/images/blackcar.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background covers the section */
     color: white;
     text-align: center;
@@ -89,6 +112,38 @@ nav ul {
     margin-bottom: 20px;
 }
 
+
+/* Added in extra */
+/* Responsive Styles for Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px; /* Reduce padding on smaller screens */
+        min-height: 400px; /* Adjust minimum height */
+    }
+
+        .hero h1 {
+            font-size: 2.5rem; /* Reduce font size for heading */
+        }
+
+        .hero p {
+            font-size: 1rem; /* Reduce font size for paragraph */
+        }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 5px; /* Further reduce padding for very small screens */
+        min-height: 300px; /* Further adjust minimum height */
+    }
+
+        .hero h1 {
+            font-size: 2rem; /* Further reduce font size for heading */
+        }
+
+        .hero p {
+            font-size: 0.875rem; /* Further reduce font size for paragraph */
+        }
+}
 
 /* Services Section */
 .services {
@@ -328,14 +383,16 @@ footer {
     justify-content: center;
     height: 400px;
     position: relative;
+    overflow: hidden; /* Ensures no overflow */
 }
 
     .carousel-item img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        max-width: 100%;
-        object-fit: cover;
+       
+        object-fit: contain;
     }
+
 
 /* Carousel Caption */
 .carousel-caption {
@@ -402,6 +459,55 @@ footer {
     .carousel-control.next:hover svg {
         transform: translateX(2px);
     }
+
+
+    /* added in extra*/
+/* Responsive Styles for Carousel */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem; /* Adjust font size for caption */
+        padding: 8px; /* Reduce padding */
+        max-width: 80%; /* Adjust max-width */
+    }
+
+    .carousel-control {
+        width: 30px; /* Reduce size of control arrows */
+        height: 30px;
+    }
+
+        .carousel-control svg {
+            width: 16px;
+            height: 16px;
+        }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        height: 250px; /* Further adjust height for very small screens */
+    }
+
+    .carousel-caption {
+        font-size: 0.8rem; /* Further reduce font size for caption */
+        padding: 6px; /* Further reduce padding */
+        max-width: 70%; /* Adjust max-width */
+    }
+
+    .carousel-control {
+        width: 25px; /* Further reduce size of control arrows */
+        height: 25px;
+    }
+
+        .carousel-control svg {
+            width: 14px;
+            height: 14px;
+        }
+}
+
+
 
 /* Button Styles */
 .btn-inquire {
