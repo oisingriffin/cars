@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa; /* Light gray background */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header Styles */
@@ -63,7 +64,7 @@ nav ul {
 
 /* Hero Section */
 .hero {
-    background: url('/Images/blackcar.jpg') no-repeat center center;
+    background: url('/images/blackcar.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background covers the section */
     color: white;
     text-align: center;
@@ -131,93 +132,7 @@ nav ul {
         color: #666;
     }
 
-/* Portfolio Section */
-.portfolio {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-    position: relative; /* Ensure positioning context */
-}
 
-    .portfolio h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        position: relative; /* Ensure heading is positioned correctly */
-        z-index: 10; /* Ensure heading is above carousel */
-    }
-
-/* Carousel Container */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 40px; /* Add padding to ensure heading is visible */
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Match the testimonials background */
-}
-
-.carousel {
-    display: flex;
-    position: relative;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px; /* Adjust height as needed */
-    position: relative; /* Ensure proper positioning for caption */
-}
-
-    .carousel-item img {
-        width: auto; /* Adjust width */
-        height: 100%; /* Adjust height */
-        max-width: 100%;
-        object-fit: cover; /* Ensure proper image fit */
-    }
-
-.carousel-caption {
-    text-align: center;
-    margin-top: 10px; /* Space between image and caption */
-    padding: 10px; /* Padding around text */
-    background: rgba(0, 0, 0, 0.5); /* Optional: Background color with transparency */
-    color: white; /* Text color */
-    width: 100%; /* Ensure caption width matches carousel item width */
-    box-sizing: border-box;
-    position: absolute; /* Absolute positioning within carousel item */
-    bottom: 0; /* Position at the bottom of the carousel item */
-    padding: 10px; /* Add padding inside the caption */
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    line-height: 50px;
-    text-align: center;
-    z-index: 10;
-    transform: translateY(-50%);
-}
-
-    .carousel-control.prev {
-        left: 10px;
-    }
-
-    .carousel-control.next {
-        right: 10px;
-    }
 
 
 /* Compact Modern Testimonials Section */
@@ -379,17 +294,21 @@ footer {
             max-width: 90%;
         }
 }
+
+
+
+
+
 /* Carousel Container */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding-top: 40px; /* Ensure there's space for the heading */
-   
-    background: #2c5364; /* Fallback color */
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding-top: 40px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364) !important;
 }
 
+/* Carousel */
 .carousel {
     display: flex;
     position: relative;
@@ -407,43 +326,43 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px; /* Adjust height as needed */
-    position: relative; /* Positioning context for caption */
+    height: 400px;
+    position: relative;
 }
 
-    /* Ensure image fits properly */
     .carousel-item img {
-        width: auto; /* Adjust width to maintain aspect ratio */
-        height: 100%; /* Adjust height */
-        max-width: 100%; /* Prevent image from overflowing */
-        object-fit: cover; /* Ensure proper image fit */
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
     }
 
-/* Caption styling */
+/* Carousel Caption */
 .carousel-caption {
     text-align: center;
-    margin-top: 10px; /* Space between image and caption */
-    padding: 10px; /* Padding around the text */
-    background: rgba(0, 0, 0, 0.5); /* Background color with transparency */
-    color: white; /* Text color */
-    position: absolute; /* Absolute positioning within carousel item */
-    bottom: 0; /* Position at the bottom of the carousel item */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position */
-    width: auto; /* Adjust width to fit content */
-    max-width: 90%; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding in width calculation */
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 90%;
+    box-sizing: border-box;
 }
+
 /* Carousel Control Arrows */
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px; /* Adjust width to make the arrow container smaller */
-    height: 40px; /* Adjust height to make the arrow container smaller */
-    background-color: rgba(0, 0, 0, 0.4); /* Dark, semi-transparent background */
+    width: 40px; /* Consistent size */
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
     border: none;
-    border-radius: 50%; /* Circular shape */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,72 +372,72 @@ footer {
 }
 
     .carousel-control.prev {
-        left: 15px; /* Position on the left */
+        left: 15px;
     }
 
     .carousel-control.next {
-        right: 15px; /* Position on the right */
+        right: 15px;
     }
 
     .carousel-control:hover {
-        background-color: rgba(0, 0, 0, 0.6); /* Darker background on hover */
-        transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: translateY(-50%) scale(1.1);
     }
 
     .carousel-control:focus {
-        outline: none; /* Remove focus outline */
+        outline: none;
     }
 
-    /* Arrow Icon Style */
     .carousel-control svg {
-        fill: white; /* White arrow color */
-        width: 20px; /* Arrow size */
-        height: 20px; /* Arrow size */
+        fill: white;
+        width: 20px;
+        height: 20px;
         transition: transform 0.3s ease;
     }
 
     .carousel-control:hover svg {
-        transform: translateX(-2px); /* Subtle movement for left arrow on hover */
+        transform: translateX(-2px);
     }
 
     .carousel-control.next:hover svg {
-        transform: translateX(2px); /* Subtle movement for right arrow on hover */
+        transform: translateX(2px);
     }
-
-
-
-/* Carousel Caption */
-.carousel-caption {
-    text-align: center;
-    margin-top: 10px; /* Space between image and caption */
-    padding: 10px; /* Padding around the text */
-    background: rgba(0, 0, 0, 0.5); /* Background color with transparency */
-    color: white; /* Text color */
-    position: absolute; /* Absolute positioning within carousel item */
-    bottom: 0; /* Position at the bottom of the carousel item */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position */
-    width: auto; /* Adjust width to fit content */
-    max-width: 90%; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
 
 /* Button Styles */
 .btn-inquire {
     display: inline-block;
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 10px; /* Space between text and button */
+    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
     .btn-inquire:hover {
-        background-color: #218838; /* Darker green for hover effect */
+        background-color: #218838;
     }
+
+/* Portfolio Section */
+.portfolio {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    position: relative;
+}
+
+    .portfolio h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+
+
+
 
 
 /* Ensure the header container is positioned relatively */
@@ -528,53 +447,104 @@ header .container {
     height: 100px; /* Set a fixed height for the header to contain the logo */
 }
 
-/* Welcome Section Styles */
+/* General Styles */
 .welcome {
     display: flex;
     align-items: center;
-    background-color: #000; /* Black background */
-    color: white; /* White text */
-    padding: 40px 20px; /* Padding around the section */
-    gap: 0; /* No gap between text and image */
+    background-color: #000;
+    color: white;
+    padding: 40px 20px;
 }
 
 .welcome-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Optional: same max-width as other containers */
+    max-width: 1200px;
     margin: 0 auto;
-    gap: 0; /* Ensure no gap between text and image */
+    gap: 20px;
 }
 
 .welcome-text {
-    flex: 1; /* Takes up available space */
-    max-width: 50%; /* Limits width to 50% */
+    flex: 1;
+    max-width: 50%;
     text-align: center;
-    padding-right: 20px; /* Add some space between the text and the image */
+    padding-right: 20px;
 }
 
     .welcome-text h2 {
-        font-size: 2rem; /* Adjust size as needed */
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 20px;
     }
 
     .welcome-text p {
-        font-size: 1rem; /* Adjust size as needed */
-        margin-bottom: 10px; /* Space between paragraphs */
+        font-size: 1rem;
+        margin-bottom: 10px;
     }
 
 .welcome-image {
-    flex: 1; /* Takes up available space */
-    max-width: 50%; /* Limits width to 50% */
+    flex: 1;
+    max-width: 50%;
 }
 
     .welcome-image img {
-        width: 100%; /* Make sure image fills the container */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any space below the image */
+        width: 100%;
+        height: auto;
+        display: block;
     }
+
+/* Media Query for Devices with a Max Width of 768px */
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .welcome-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .welcome-text {
+        text-align: center;
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+        .welcome-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-text p {
+            font-size: 0.875rem;
+            margin-bottom: 10px;
+        }
+
+    .welcome-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+        .welcome-image img {
+            width: 100%;
+            height: auto;
+        }
+}
+
+/* Additional Media Queries for Smaller Breakpoints */
+@media (max-width: 480px) {
+    .welcome-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .welcome-text p {
+        font-size: 0.75rem;
+    }
+}
+
+
 
 
 /* Car Info Section */
