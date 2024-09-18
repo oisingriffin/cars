@@ -105,43 +105,63 @@
             font-size: 28px;
             margin-bottom: 20px;
         }
+
+
+        .header {
+            background-color: #fff; /* Background color for header */
+            padding: 10px 0; /* Padding around the header */
+            text-align: center; /* Center-align text and elements */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center; /* Center the logo horizontally */
+            align-items: center; /* Center the logo vertically */
+            max-width: 100%; /* Ensure full-width container */
+            margin: auto; /* Center the container horizontally */
+        }
+
+        .logo img {
+            max-height: 100px; /* Set a maximum height for the logo */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .logo img {
+                max-height: 80px; /* Adjust logo height for smaller screens */
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="/Images/Supremecar.jpg.png" alt="Supreme Cars"></a>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/Images/Supremecar.jpg.png" alt="Supreme Cars">
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main role="main" class="pb-3">
 
-       
+
 
         <!-- Slideshow Section -->
         <section class="slideshow-section">
             <div class="slideshow-container">
 
                 <div class="mySlides">
-                    <img src="/Images/car1.png" alt="Car 1">
-                    <div class="carousel-caption">
-                        <h3>Volkswagen Golf</h3>
-                        <p>$20,000</p>
-                        <a href="/car1.html" class="btn btn-inquire">Inquire Now</a>
-                    </div>
+                    <img src="/images/car1.png" alt="Car 1">
+
                 </div>
 
                 <div class="mySlides">
-                    <img src="/Images/car5.png" alt="Car 2">
-                    <div class="carousel-caption">
-                        <h3>Volkswagen Passat</h3>
-                        <p>$25,000</p>
-                        <a href="/car2.html" class="btn btn-inquire">Inquire Now</a>
-                    </div>
+                    <img src="/images/car5.png" alt="Car 2">
+
                 </div>
 
                 <!-- Continue for more items -->
@@ -193,11 +213,11 @@
                 <!-- In-depth description section -->
                 <div class="detailed-description">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, tortor at tincidunt aliquet, leo augue congue nulla, non tincidunt sapien odio sit amet nisl. Duis tincidunt odio eu est feugiat, in auctor lacus placerat. Cras aliquam venenatis lectus, in sodales leo scelerisque vitae.</p>
+                    <p>Random Text whatever you want about the car.More random text about the car and you add add as much as you like</p>
 
-                    <p>Curabitur et ligula nec magna vehicula congue. Nullam at nisl nec nisl tincidunt sollicitudin a a magna. Proin condimentum sapien non neque faucibus fermentum. Integer nec ultricies ligula. Sed vitae convallis arcu, ut tincidunt lacus. Vivamus blandit nisi ut felis sollicitudin, nec viverra urna viverra.</p>
+                    <p>More random text about the car and you add add as much as you like. You can leave this blank either whatever you think is best</p>
 
-                    <p>Ut convallis facilisis est, non vulputate mauris fringilla at. Phasellus ultrices, lacus id suscipit feugiat, metus risus vulputate risus, id egestas metus justo eu nisi. Vestibulum in tortor quis quam dictum fermentum. Quisque consequat, arcu a scelerisque ullamcorper, elit ante efficitur risus, sed fringilla lorem ipsum vel urna.</p>
+                    
 
 
                 </div>
@@ -209,26 +229,33 @@
         <!-- Inquiry Form -->
         <section class="inquiry-form">
             <div class="container">
-                <h2>Inquire About This Car</h2>
-                <form method="post">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Inquiry</button>
-                </form>
+                <h2>To Inquire About This Car Please see Contact Information Below!</h2>
+                
+                
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="container footer-content">
+            <img src="/Images/Supremecar.jpg.png" alt="Supreme Cars Logo" class="footer-logo">
+            <p>&copy; 2024 Supreme Cars. All rights reserved.</p>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone"></i> <a href="tel:+083-3961576">083-3961576</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:supremecarsireland@gmail.com">supremecarsireland@gmail.com</a></li>
+            </ul>
+            <ul class="social-media">
+                <li class="facebook"><a href="https://www.facebook.com/Supremecarsireland" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+
+                <li class="instagram"><a href="https://www.instagram.com/supremecarsireland" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="/js/slideshow.js"></script>
+</body>
+</html>
 
         <script src="/js/slideshow.js"></script>
 </body>
