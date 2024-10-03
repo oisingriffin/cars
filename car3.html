@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Supreme Cars Ireland</title>
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Slideshow Section */
+        .slideshow-section {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .slideshow-container {
+            max-width: 80%;
+            max-height: 500px;
+            position: relative;
+            margin: auto;
+            background: transparent;
+        }
+
+        /* Image Styles */
+        .mySlides img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        /* Caption Styles */
+        .carousel-caption {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-caption {
+                bottom: 20px;
+                font-size: 12px;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-caption {
+                bottom: 10px;
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+        }
+
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+        /* Button styling for "Inquire Now" */
+        .btn-inquire {
+            display: inline-block;
+            background-color: #ff5733;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* "Find Your Next Car" Heading */
+        .slideshow-heading {
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+
+        .header {
+            background-color: #fff; /* Background color for header */
+            padding: 10px 0; /* Padding around the header */
+            text-align: center; /* Center-align text and elements */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center; /* Center the logo horizontally */
+            align-items: center; /* Center the logo vertically */
+            max-width: 100%; /* Ensure full-width container */
+            margin: auto; /* Center the container horizontally */
+        }
+
+        .logo img {
+            max-height: 100px; /* Set a maximum height for the logo */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .logo img {
+                max-height: 80px; /* Adjust logo height for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/Images/Supremecar.jpg.png" alt="Supreme Cars">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" class="pb-3">
+
+
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-section">
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <img src="/Images/live3.png" alt="Car 1">
+
+                </div>
+
+              
+
+                <!-- Continue for more items -->
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+
+
+
+
+
+       
+        <div class="car-info-container">
+            <div class="car-info">
+                <h2>Ford Focus</h2>
+                <div class="car-details-grid">
+                    <!-- First Column -->
+                    <div class="car-details-column">
+                        <p><i class="fas fa-dollar-sign icon"></i><strong>Price:</strong> €5,000</p>
+                    
+                        <p><i class="fas fa-cogs icon"></i><strong>Transmission:</strong> Manual</p>
+                       
+                       
+                    </div>
+
+                    <!-- Second Column -->
+                    <div class="car-details-column">
+                        <p><i class="fas fa-cogs icon"></i><strong>Engine Type:</strong> 2L</p>
+
+                        <p><i class="fas fa-calendar-alt icon"></i><strong>Year:</strong> 2012</p>
+
+
+                        <p><i class="fas fa-check-circle icon"></i><strong>NCT:</strong> 5/5/25</p>
+                        <p><i class="fas fa-check-circle icon"></i><strong>TAX:</strong> 24/11/24 €190</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- New Container Section for Description -->
+        <div class="description-container">
+            <div class="description-content">
+                <h2>Description</h2>
+
+
+                <!-- In-depth description section -->
+                <div class="detailed-description">
+
+                    <p>Ford Focus</p>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Inquiry Form -->
+        <section class="inquiry-form">
+            <div class="container">
+                <h2>To Inquire About This Car Please see Contact Information Below!</h2>
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <img src="/Images/Supremecar.jpg.png" alt="Supreme Cars Logo" class="footer-logo">
+            <p>&copy; 2024 Supreme Cars. All rights reserved.</p>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone"></i> <a href="tel:+083-3961576">083-3961576</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:supremecarsireland@gmail.com">supremecarsireland@gmail.com</a></li>
+            </ul>
+            <ul class="social-media">
+                <li class="facebook"><a href="https://www.facebook.com/Supremecarsireland" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+
+                <li class="instagram"><a href="https://www.instagram.com/supremecarsireland" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="/js/slideshow.js"></script>
+</body>
+</html>
+
+        <script src="/js/slideshow.js"></script>
+</body>
+</html>
